@@ -13,7 +13,7 @@ import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper
 {
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "contactsManager";
     private static final String TABLE_CONTACTS = "contacts";
     private static final String KEY_ID = "id";
@@ -57,7 +57,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
     {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_CONTACTS);
     }
-    ''
+    
     Contact getContact (int id)
     {
         SQLiteDatabase db = this.getReadableDatabase();
