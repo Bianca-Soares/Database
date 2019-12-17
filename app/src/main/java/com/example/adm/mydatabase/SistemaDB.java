@@ -71,5 +71,9 @@ public class SistemaDB extends SQLiteOpenHelper {
         Contacts contacts = new Contacts(Integer.parseInt(cursor.getString(0)), cursor.getString(1));
         return contacts;
     }
+    
+    public static final String TABLE_NAME = "usuarios";
+public static final String DATABASE_DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
+db.execSQL(DATABASE_DROP_TABLE);
 
 }
